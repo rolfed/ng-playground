@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-view-title',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-title.component.scss']
 })
 export class ViewTitleComponent {
-
+  @Input() hasBackButton = false;
+  @Input() viewTitle = 'No title';
+  @Input() subtitle = 'No subtitle';
 }
