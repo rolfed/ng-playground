@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { JobsRoutingModule } from './jobs-routing.module';
 import { JobsComponent } from './jobs.component';
+import {ViewTitleModule} from "../../shared/view-title/view-title.module";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { JobsComponent } from './jobs.component';
   ],
   imports: [
     CommonModule,
-    JobsRoutingModule
+    JobsRoutingModule,
+    ViewTitleModule
   ]
 })
 export class JobsModule { }
