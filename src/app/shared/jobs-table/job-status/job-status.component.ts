@@ -1,0 +1,12 @@
+import {Component, Input} from '@angular/core';
+import {JobStatusEnum} from "../../../models/data-layer/job-status.enum";
+
+@Component({
+  selector: 'app-job-status',
+  templateUrl: './job-status.component.html',
+  styleUrls: ['./job-status.component.scss']
+})
+export class JobStatusComponent {
+  @Input() status: JobStatusEnum = JobStatusEnum.NEW;
+  JobStatusEnum = JobStatusEnum;
+}
