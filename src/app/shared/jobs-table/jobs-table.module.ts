@@ -6,6 +6,7 @@ import { MatTableModule } from "@angular/material/table";
 import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
 import { RouterModule } from "@angular/router";
+import {ContextMenuModule} from "../context-menu/context-menu.module";
 
 
 
@@ -19,7 +20,8 @@ import { RouterModule } from "@angular/router";
     MatTableModule,
     MatIconModule,
     MatMenuModule,
-    RouterModule
+    RouterModule,
+    ContextMenuModule
   ],
   exports: [
     JobsTableComponent
