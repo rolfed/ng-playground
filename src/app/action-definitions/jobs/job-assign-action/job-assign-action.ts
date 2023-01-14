@@ -8,8 +8,8 @@ import {MatDialog} from "@angular/material/dialog";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {
   JobUserAssignDialogDataModel
-} from "../../../dialog/job-user-assign-dialog/models/job-user-assign-dialog-data.model";
-import {JobUserAssignDialogComponent} from "../../../dialog/job-user-assign-dialog/job-user-assign-dialog.component";
+} from "../../../dialogs/job-user-assign-dialog/models/job-user-assign-dialog-data.model";
+import {JobUserAssignDialogComponent} from "../../../dialogs/job-user-assign-dialog/job-user-assign-dialog.component";
 
 @Injectable({
   providedIn: 'root'
