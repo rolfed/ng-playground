@@ -4,16 +4,25 @@ import {JobAssignActionParams} from "./job-assign-action-params";
 import {ActionDefinitionContextMenu} from "../../action-definition-context-menu";
 import {Observable, tap} from "rxjs";
 import {UserModel} from "../../../models/presentation-layer/user.model";
+import {MatDialog} from "@angular/material/dialog";
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {
+  JobUserAssignDialogDataModel
+} from "../../../dialog/job-user-assign-dialog/models/job-user-assign-dialog-data.model";
+import {JobUserAssignDialogComponent} from "../../../dialog/job-user-assign-dialog/job-user-assign-dialog.component";
 
 @Injectable({
   providedIn: 'root'
 })
 export class JobAssignAction extends ActionDefinition<JobAssignActionParams> {
-  constructor() {
+  constructor(
+    private dialogService: MatDialog,
+    private snackBar: MatSnackBar
+  ) {
     super();
   }
 
-  invoke(params: JobAssignActionParams): void | Observable<void> {
+  invoke(params: JobAssignActionParams): any | Observable<any> {
     const dialogData: JobUserAssignDialogDataModel = {
       jobId: params.jobId
     }
