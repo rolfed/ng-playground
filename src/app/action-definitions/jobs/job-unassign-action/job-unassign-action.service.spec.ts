@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { JobUnassignActionService } from './job-unassign-action.service';
+import { JobUnassignAction } from './job-unassign-action';
 
 describe('JobUnassignActionService', () => {
-  let service: JobUnassignActionService;
+  let service: JobUnassignAction;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(JobUnassignActionService);
+    service = TestBed.inject(JobUnassignAction);
   });
 
   it('should be created', () => {

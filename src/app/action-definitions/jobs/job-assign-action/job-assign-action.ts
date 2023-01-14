@@ -22,7 +22,7 @@ export class JobAssignAction extends ActionDefinition<JobAssignActionParams> {
     super();
   }
 
-  invoke(params: JobAssignActionParams): any | Observable<any> {
+  invoke(params: JobAssignActionParams): Observable<any> {
     const dialogData: JobUserAssignDialogDataModel = {
       jobId: params.jobId
     }

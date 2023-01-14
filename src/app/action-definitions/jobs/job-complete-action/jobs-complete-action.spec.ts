@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { JobsCompleteActionService } from './jobs-complete-action.service';
+import { JobCompleteAction } from './job-complete-action';
 
 describe('JobsCompleteActionService', () => {
-  let service: JobsCompleteActionService;
+  let service: JobCompleteAction;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(JobsCompleteActionService);
+    service = TestBed.inject(JobCompleteAction);
   });
 
   it('should be created', () => {

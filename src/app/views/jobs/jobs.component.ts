@@ -4,6 +4,7 @@ import {JobModel} from "../../models/presentation-layer/job.model";
 import {JobsService} from "../../servies/jobs.service";
 import {defaultIfEmpty} from "rxjs";
 import {JobAssignAction} from "../../action-definitions/jobs/job-assign-action/job-assign-action";
+import {JobCompleteAction} from "../../action-definitions/jobs/job-complete-action/job-complete-action";
 
 @Component({
   selector: 'app-jobs',
