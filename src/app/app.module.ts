@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JobUserAssignDialogModule } from "./dialogs/job-user-assign-dialog/job-user-assign-dialog.module";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatDialogModule } from "@angular/material/dialog";
+import { ConfirmationDialogModule } from "./dialogs/confirmation-dialog/confirmation-dialog.module";
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { MatDialogModule } from "@angular/material/dialog";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    JobUserAssignDialogModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    JobUserAssignDialogModule,
+    ConfirmationDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

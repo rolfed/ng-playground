@@ -17,6 +17,7 @@ export abstract class ActionDefinition<Params> {
         if (isObservable(result)) {
           result
             .pipe(take(1))
+            .subscribe(() => config.onSuccess?.())
         } else {
           config.onSuccess?.();
         }

@@ -10,7 +10,7 @@ import {JobRestartActionParams} from "./job-restart-action-params";
 @Injectable({
   providedIn: 'root'
 })
-export class JobsRestartAction extends ActionDefinition<JobRestartActionParams> {
+export class JobRestartAction extends ActionDefinition<JobRestartActionParams> {
 
   constructor(
     private jobsService: JobsService,

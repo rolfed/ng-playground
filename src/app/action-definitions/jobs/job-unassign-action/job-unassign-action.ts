@@ -19,11 +19,11 @@ export class JobUnassignAction extends ActionDefinition<JobUnassignActionParam>{
     super();
   }
 
-  invoke(params: JobUnassignActionParam): void | Observable<void> {
+  invoke(params: JobUnassignActionParam): any | Observable<any> {
     return this.confirmationDialogService
       .open({
-        title: `Unassign ${params.currentUserName}`,
-        content: `You are going to unassign ${params.currentUserName} from this Job, are you sure?`,
+        title: `Unassign ${params.currentUserName}?`,
+        content: `You are going to unassign ${params.currentUserName} from this Job, are you completely sure?`,
       })
       .pipe(
         filter(Boolean),
@@ -36,7 +36,7 @@ export class JobUnassignAction extends ActionDefinition<JobUnassignActionParam>{
         filter(Boolean),
         switchMap(() => this.jobsService.setUser(params.jobId, undefined)),
         tap(() => this.snackBar.open('User unassigned successfully'))
-      )
+      );
   }
 
   protected getMenu(): ActionDefinitionContextMenu {

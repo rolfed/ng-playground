@@ -30,6 +30,8 @@ export class JobsService {
   }
 
   setUser(jobId: string, userId?: string): Observable<void> {
+    console.log('TEST: ', jobId, userId);
+
     return this.findJob(jobId)
       .pipe(
         tap(job => {
